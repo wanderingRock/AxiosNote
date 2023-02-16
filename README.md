@@ -289,3 +289,4 @@ axios.get('/user/12345')
   });
 ```
 ### 參考連結:http://axios-js.com/zh-cn/docs/index.html
+$$$ https://blog.logrocket.com/using-axios-set-request-headers/
