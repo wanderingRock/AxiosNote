@@ -253,6 +253,17 @@ axios.interceptors.response.use(function (response) {
 const instance = axios.create();
 instance.interceptors.request.use(function () {/*...*/});
 
+// 添加config設定檔
+axios.interceptors.request.use(
+  config => {
+    config.headers['Authorization'] = `Bearer ${localStorage.getItem('access_token')}`;
+        return config;
+    },
+    error => {
+        return Promise.reject(error);
+    }
+);
+
 ```
 # 错误处理
 
